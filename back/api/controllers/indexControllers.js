@@ -1,9 +1,11 @@
+// Funções ficam no Controller
+
 module.exports = {
     indexControllers,
 };
 
 
 function indexControllers(req, res) {
-    console.log(`Rota Autores Encontradas`);
-    res.json(`Rota Autores Encontrada`)
+    console.log(`Rota Raiz Encontradas`);
+    res.json(`Rota Raiz Encontrada`)
 }
