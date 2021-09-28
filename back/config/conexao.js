@@ -1,8 +1,8 @@
-var mysql = require('mysql2');
-var database = 'dados212n';
+const mysql = require('mysql2');
+const database = 'dados212n';
 
 // instanciar objeto de acesso ao banco de dados
-var conexao = mysql.createConnection({
+const conexao = mysql.createConnection({
     user: 'root',
     password: '130517',
     host: 'localhost',
