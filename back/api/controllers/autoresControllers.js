@@ -18,7 +18,7 @@ function autoresGetAll(req, res) {
     console.log(`Listar Autores { Models }`);
     //res.json(`Listar Autores { Models }`)
     autoresModels.getAllAutores(function(err, resposta) {
-        console.log(`Retorno de Autores { Models }`, resposta);
+        console.log(`Retorno de Autores { Models }, resposta`, resposta);
         if(err) {
             throw err;
         } else {
@@ -39,6 +39,7 @@ function autoresGetById(req, res) {
         } else {
             res.json(resposta)
         }
+       
     })
 }
 function autoresAtivoInativo(req, res) {
@@ -61,7 +62,9 @@ function autoresAtivoInativo(req, res) {
         autoresModels.ativarInativar(id, p_ativo, function(err, result) {
             if(err) throw err
             console.log(`Registro Atualizado!!!`);
-            res.json(result)
+            res.redirect(`/autores/listar/`)
+
+            //res.json(result)
         })
     })
 }

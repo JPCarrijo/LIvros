@@ -9,7 +9,7 @@ module.exports = {
 
 function livrosMenu(req, res) {
     console.log(`Rota Livros Encontrada`);
-    res.json(`Rota LIvros Encontrada`)
+    res.json(`Rota Livros Encontrada`)
 }
 
 function livrosGetAll(req, res) {
