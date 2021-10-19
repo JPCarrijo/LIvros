@@ -49,8 +49,8 @@ function editorasAtivoInativo(req, res) {
 
   console.log(`Parâmetro Esperado: ${id}`);
   editorasModels.getByIdEditoras(id, function(err, resposta) {
-      console.log(`Retorno de Autores Ativo/Inativo: `, resposta[0].aut_ativoinativo);
-      p_ativo = resposta[0].aut_ativoinativo;
+      console.log(`Retorno de Editoras Ativo/Inativo: `, resposta[0].edt_ativoinativo);
+      p_ativo = resposta[0].edt_ativoinativo;
 
       if(err) throw err;
       else {
@@ -62,7 +62,7 @@ function editorasAtivoInativo(req, res) {
       editorasModels.ativarInativar(id, p_ativo, function(err, result) {
           if(err) throw err
           console.log(`Registro Atualizado!!!`);
-          res.redirect(`/autores/listar/`)
+          res.redirect(`/editoras/listar/`)
 
           //res.json(result)
       })
