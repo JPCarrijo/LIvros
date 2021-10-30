@@ -1,10 +1,13 @@
 const express = require('express');
 const consign = require('consign');
+const cors = require('cors')
 
 // Instanciando o servidor express
 server = express();
-server.set('porta', 3001);
+server.use(cors()); 
 
+server.set('porta', 3001);
+server.set('url', "http://localhost:");
 
 consign({ cwd: 'api'})
     .include('models')
